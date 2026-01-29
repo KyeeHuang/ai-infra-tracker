@@ -1,0 +1,794 @@
+[
+  {
+    "title": "Cost-Efficient Online Document Parsing: Deploy and Serve vLLM on GCP Cloud Run",
+    "url": "https://medium.com/@jeremyarancio?source=topic_portal---recommended_stories---vllm---0-107--------------------ce382f6c_3f31_4518_ad9b_676b277b147b--------------",
+    "author": "Jeremy Arancio",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:01:07"
+    ],
+    "source": "ai-infra,vLLM"
+  },
+  {
+    "title": "Why this 30B MoE model quietly marks the real beginning of the local AI era",
+    "url": "https://medium.com/@algoinsights?source=topic_portal---recommended_stories---vllm---1-84--------------------ce382f6c_3f31_4518_ad9b_676b277b147b--------------",
+    "author": "Algo Insights",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:01:07"
+    ],
+    "source": "ai-infra,vLLM"
+  },
+  {
+    "title": "GLM-4.7-Flash on 24GB GPU (llama.ccp, vLLM, SGLang, Transformers)",
+    "url": "https://medium.com/@agentnativedev?source=topic_portal---recommended_stories---vllm---2-85--------------------ce382f6c_3f31_4518_ad9b_676b277b147b--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Agent Native",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:01:07"
+    ],
+    "source": "ai-infra,vLLM"
+  },
+  {
+    "title": "Building High-Performance Agentic AI with vLLM and LangGraph",
+    "url": "https://medium.com/@dewasheesh.rana?source=topic_portal---recommended_stories---vllm---3-84--------------------ce382f6c_3f31_4518_ad9b_676b277b147b--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Dewasheesh Rana",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:01:07"
+    ],
+    "source": "ai-infra,vLLM"
+  },
+  {
+    "title": "vLLM v0.14.0: Async Scheduling, gRPC, and Deployability",
+    "url": "https://medium.com/@agentnativedev?source=topic_portal---recommended_stories---vllm---4-85--------------------ce382f6c_3f31_4518_ad9b_676b277b147b--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Agent Native",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:01:07"
+    ],
+    "source": "ai-infra,vLLM"
+  },
+  {
+    "title": "vLLM Quickstart: High-Performance LLM Serving",
+    "url": "https://medium.com/@rosgluk?source=topic_portal---recommended_stories---vllm---5-84--------------------ce382f6c_3f31_4518_ad9b_676b277b147b--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Rost Glukhov",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:01:07"
+    ],
+    "source": "ai-infra,vLLM"
+  },
+  {
+    "title": "Running a vLLM LXC on Proxmox 9",
+    "url": "https://medium.com/@jakeasmith?source=topic_portal---recommended_stories---vllm---6-85--------------------ce382f6c_3f31_4518_ad9b_676b277b147b--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Jake A. Smith",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:01:07"
+    ],
+    "source": "ai-infra,vLLM"
+  },
+  {
+    "title": "Separating Prefill and Decode in LLM Inference: Why Performance Depends on the P:D Ratio",
+    "url": "https://medium.com/@shawnchen_17577?source=topic_portal---recommended_stories---vllm---7-84--------------------ce382f6c_3f31_4518_ad9b_676b277b147b--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Shawn Chen",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:01:07"
+    ],
+    "source": "ai-infra,vLLM"
+  },
+  {
+    "title": "Why this 30B MoE model quietly marks the real beginning of the local AI era",
+    "url": "https://medium.com/@algoinsights?source=topic_portal---latest_stories---vllm---0-----------------------------------",
+    "author": "Algo Insights",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:01:07"
+    ],
+    "source": "ai-infra,vLLM"
+  },
+  {
+    "title": "Installing vLLM on NVIDIA DGX Spark from source",
+    "url": "https://medium.com/@anveshkumarchavidi?source=topic_portal---latest_stories---vllm---1-----------------------------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Anvesh Kumar Chavidi",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:01:07"
+    ],
+    "source": "ai-infra,vLLM"
+  },
+  {
+    "title": "LLM Inference Optimization",
+    "url": "https://medium.com/@allohvk?source=topic_portal---recommended_stories---flash_attention---0-84--------------------a551ccec_f981_46d5_8ae6_3e579d1e1091--------------",
+    "author": "Allohvk",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:02:37"
+    ],
+    "source": "ai-infra,FlashAttention"
+  },
+  {
+    "title": "Why FlashAttention?",
+    "url": "https://medium.com/@katherineolowookere?source=topic_portal---recommended_stories---flash_attention---1-85--------------------a551ccec_f981_46d5_8ae6_3e579d1e1091--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Katherine Oluwadarasimi Olowookere",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:02:37"
+    ],
+    "source": "ai-infra,FlashAttention"
+  },
+  {
+    "title": "GPU kernel optimization: Online Softmax",
+    "url": "https://medium.com/@hugo.rosenkranz?source=topic_portal---recommended_stories---flash_attention---2-84--------------------a551ccec_f981_46d5_8ae6_3e579d1e1091--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Hugo Rosenkranz-costa",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:02:37"
+    ],
+    "source": "ai-infra,FlashAttention"
+  },
+  {
+    "title": "TMA: How Tensor Memory Accelerator is Supercharging AI Kernels ?",
+    "url": "https://medium.com/@deepakkumar05.it?source=topic_portal---recommended_stories---flash_attention---3-85--------------------a551ccec_f981_46d5_8ae6_3e579d1e1091--------------",
+    "author": "Deepak kumar sahoo",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:02:37"
+    ],
+    "source": "ai-infra,FlashAttention"
+  },
+  {
+    "title": "Perceptron to FlashAttention",
+    "url": "https://medium.com/@kevinvaishnav15?source=topic_portal---recommended_stories---flash_attention---4-84--------------------a551ccec_f981_46d5_8ae6_3e579d1e1091--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Kevin Vaishnav",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:02:37"
+    ],
+    "source": "ai-infra,FlashAttention"
+  },
+  {
+    "title": "WGMMA: How Warpgroup Matrix Multiply-Accumulate is Revolutionizing AI Compute -From Transformers to…",
+    "url": "https://medium.com/@deepakkumar05.it?source=topic_portal---recommended_stories---flash_attention---5-85--------------------a551ccec_f981_46d5_8ae6_3e579d1e1091--------------",
+    "author": "Deepak kumar sahoo",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:02:37"
+    ],
+    "source": "ai-infra,FlashAttention"
+  },
+  {
+    "title": "Reconstructing Attention from Hardware Up: Deep Dive into FlashAttention on AWS Neuron (NKI)",
+    "url": "https://medium.com/@pengwu550?source=topic_portal---recommended_stories---flash_attention---6-84--------------------a551ccec_f981_46d5_8ae6_3e579d1e1091--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "D Wu",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:02:37"
+    ],
+    "source": "ai-infra,FlashAttention"
+  },
+  {
+    "title": "How FlashAttention Works [Research Paper Explained] Fast and Memory-Efficient Attention",
+    "url": "https://medium.com/@simranjeetsingh1497?source=topic_portal---recommended_stories---flash_attention---7-85--------------------a551ccec_f981_46d5_8ae6_3e579d1e1091--------------",
+    "author": "Simranjeet Singh",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:02:37"
+    ],
+    "source": "ai-infra,FlashAttention"
+  },
+  {
+    "title": "LLM Inference Optimization",
+    "url": "https://medium.com/@allohvk?source=topic_portal---latest_stories---flash_attention---0-----------------------------------",
+    "author": "Allohvk",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:02:37"
+    ],
+    "source": "ai-infra,FlashAttention"
+  },
+  {
+    "title": "GPU kernel optimization: Online Softmax",
+    "url": "https://medium.com/@hugo.rosenkranz?source=topic_portal---latest_stories---flash_attention---1-----------------------------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Hugo Rosenkranz-costa",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:02:37"
+    ],
+    "source": "ai-infra,FlashAttention"
+  },
+  {
+    "title": "Min-p sampling for LLMs",
+    "url": "https://medium.com/@thoughtworks?source=topic_portal---recommended_stories---deepseek---0-107--------------------f0e2aec1_54df_4e8d_bf11_8e825b106fec--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Thoughtworks",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:04"
+    ],
+    "source": "ai-infra,DeepSeek"
+  },
+  {
+    "title": "A 1967 Math Paper Just Solved AI’s $100 Million Problem",
+    "url": "https://medium.com/@aedelon?source=topic_portal---recommended_stories---deepseek---1-84--------------------f0e2aec1_54df_4e8d_bf11_8e825b106fec--------------",
+    "author": "Delanoe Pirard",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:04"
+    ],
+    "source": "ai-infra,DeepSeek"
+  },
+  {
+    "title": "DeepSeek-V4 Leaked: The 1-Trillion Parameter “Engram” Monster That Changes Everything",
+    "url": "https://medium.com/@dinmaybrahma?source=topic_portal---recommended_stories---deepseek---2-85--------------------f0e2aec1_54df_4e8d_bf11_8e825b106fec--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Dinmay kumar Brahma",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:04"
+    ],
+    "source": "ai-infra,DeepSeek"
+  },
+  {
+    "title": "The Bare Anatomy Of A Woman",
+    "url": "https://medium.com/@trishnautam?source=topic_portal---recommended_stories---deepseek---3-84--------------------f0e2aec1_54df_4e8d_bf11_8e825b106fec--------------",
+    "author": "Trishna Utamchandani",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:04"
+    ],
+    "source": "ai-infra,DeepSeek"
+  },
+  {
+    "title": "Chinese Researchers Published a Paper on New Year’s Day That Could End Nvidia’s GPU Dominance",
+    "url": "https://medium.com/@thenovtech?source=topic_portal---recommended_stories---deepseek---4-85--------------------f0e2aec1_54df_4e8d_bf11_8e825b106fec--------------",
+    "author": "Nov Tech",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:04"
+    ],
+    "source": "ai-infra,DeepSeek"
+  },
+  {
+    "title": "DeepSeek-OCR 2: How Visual Causal Flow Architecture Teaches AI to Read Documents Like Humans",
+    "url": "https://medium.com/@tentenco?source=topic_portal---recommended_stories---deepseek---5-84--------------------f0e2aec1_54df_4e8d_bf11_8e825b106fec--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Ewan Mak",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:04"
+    ],
+    "source": "ai-infra,DeepSeek"
+  },
+  {
+    "title": "Founder’s Open-Model Stack: GLM-4.7, Qwen3-VL, DeepSeek-V3.2, Kimi-K2, FLUX.2",
+    "url": "https://medium.com/@agentnativedev?source=topic_portal---recommended_stories---deepseek---6-85--------------------f0e2aec1_54df_4e8d_bf11_8e825b106fec--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Agent Native",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:04"
+    ],
+    "source": "ai-infra,DeepSeek"
+  },
+  {
+    "title": "One Year After DeepSeek: Is China Quietly Winning the AI Race?",
+    "url": "https://medium.com/@dracattusdev?source=topic_portal---recommended_stories---deepseek---7-84--------------------f0e2aec1_54df_4e8d_bf11_8e825b106fec--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "DracattusDev",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:04"
+    ],
+    "source": "ai-infra,DeepSeek"
+  },
+  {
+    "title": "The Bare Anatomy Of A Woman",
+    "url": "https://medium.com/@trishnautam?source=topic_portal---latest_stories---deepseek---0-----------------------------------",
+    "author": "Trishna Utamchandani",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:04"
+    ],
+    "source": "ai-infra,DeepSeek"
+  },
+  {
+    "title": "A 1967 Math Paper Just Solved AI’s $100 Million Problem",
+    "url": "https://medium.com/@aedelon?source=topic_portal---latest_stories---deepseek---1-----------------------------------",
+    "author": "Delanoe Pirard",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:04"
+    ],
+    "source": "ai-infra,DeepSeek"
+  },
+  {
+    "title": "From PyTorch to ONNX: How Performance and Accuracy Compare",
+    "url": "https://medium.com/@claudia.yao2012?source=topic_portal---recommended_stories---tensorrt---0-107--------------------b3682ff4_d145_4de6_888e_efdc6aa32544--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Claudia Yao",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:30"
+    ],
+    "source": "ai-infra,TensorRT"
+  },
+  {
+    "title": "Performance and Accuracy Comparison of PyTorch Models Using Torch-TensorRT Acceleration",
+    "url": "https://medium.com/@claudia.yao2012?source=topic_portal---recommended_stories---tensorrt---1-107--------------------b3682ff4_d145_4de6_888e_efdc6aa32544--------------",
+    "author": "Claudia Yao",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:30"
+    ],
+    "source": "ai-infra,TensorRT"
+  },
+  {
+    "title": "TensorRT: Supercharging Deep Learning Inference",
+    "url": "https://medium.com/@lovina.dmello.06?source=topic_portal---recommended_stories---tensorrt---2-84--------------------b3682ff4_d145_4de6_888e_efdc6aa32544--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Lovina Dmello",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:30"
+    ],
+    "source": "ai-infra,TensorRT"
+  },
+  {
+    "title": "Sharing my LLM Inference Journey 🚀",
+    "url": "https://medium.com/@haiya307?source=topic_portal---recommended_stories---tensorrt---3-85--------------------b3682ff4_d145_4de6_888e_efdc6aa32544--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Haiya",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:30"
+    ],
+    "source": "ai-infra,TensorRT"
+  },
+  {
+    "title": "Accelerating LightGlue Inference with ONNX Runtime and TensorRT",
+    "url": "https://medium.com/@fabio-sim?source=topic_portal---recommended_stories---tensorrt---4-84--------------------b3682ff4_d145_4de6_888e_efdc6aa32544--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Fabio Milentiansen Sim",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:30"
+    ],
+    "source": "ai-infra,TensorRT"
+  },
+  {
+    "title": "How to Accelerate SAM3 with TensorRT for Real-Time Inference",
+    "url": "https://medium.com/@k.kyosuke.saito?source=topic_portal---recommended_stories---tensorrt---5-85--------------------b3682ff4_d145_4de6_888e_efdc6aa32544--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "kyon",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:30"
+    ],
+    "source": "ai-infra,TensorRT"
+  },
+  {
+    "title": "From ONNX to TensorRT: Step-by-Step Inference Guide",
+    "url": "https://medium.com/@claudia.yao2012?source=topic_portal---recommended_stories---tensorrt---6-84--------------------b3682ff4_d145_4de6_888e_efdc6aa32544--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Claudia Yao",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:30"
+    ],
+    "source": "ai-infra,TensorRT"
+  },
+  {
+    "title": "Choosing your LLM framework: a comparison of Ollama, vLLM, SGLang and TensorRT-LLM",
+    "url": "https://medium.com/@thomaswojcik?source=topic_portal---recommended_stories---tensorrt---7-85--------------------b3682ff4_d145_4de6_888e_efdc6aa32544--------------",
+    "author": "Thomas Wojcik",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:30"
+    ],
+    "source": "ai-infra,TensorRT"
+  },
+  {
+    "title": "Performance and Accuracy Comparison of PyTorch Models Using Torch-TensorRT Acceleration",
+    "url": "https://medium.com/@claudia.yao2012?source=topic_portal---recommended_stories---model_quantization---0-107--------------------1346700b_2681_4961_bba3_ac375a12b92b--------------",
+    "author": "Claudia Yao",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:53"
+    ],
+    "source": "ai-infra,Model Quantization"
+  },
+  {
+    "title": "Gilgamesh: Building a Domain QA Assistant on a 4GB GPU (Phi-3 + QLoRA + RAG)",
+    "url": "https://medium.com/@aftabgazali001?source=topic_portal---recommended_stories---model_quantization---1-84--------------------1346700b_2681_4961_bba3_ac375a12b92b--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Aftab Gazali",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:53"
+    ],
+    "source": "ai-infra,Model Quantization"
+  },
+  {
+    "title": "What ROCm Profiling Revealed About Quantized LLMs on AMD’s Fastest GPU",
+    "url": "https://medium.com/@afsara.benazir?source=topic_portal---recommended_stories---model_quantization---2-85--------------------1346700b_2681_4961_bba3_ac375a12b92b--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "afsara benazir",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:53"
+    ],
+    "source": "ai-infra,Model Quantization"
+  },
+  {
+    "title": "AWQ vs GPTQ: A Practical Decision Framework for LLM Quantization",
+    "url": "https://medium.com/@patriwala?source=topic_portal---recommended_stories---model_quantization---3-84--------------------1346700b_2681_4961_bba3_ac375a12b92b--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Amit Patriwala (Enterprise Solution Architect)",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:53"
+    ],
+    "source": "ai-infra,Model Quantization"
+  },
+  {
+    "title": "Understanding LLM Weight Quantization: GPTQ, AWQ, and GGUF: Make BIG models fit in a small space",
+    "url": "https://medium.com/@abhi-84?source=topic_portal---recommended_stories---model_quantization---4-85--------------------1346700b_2681_4961_bba3_ac375a12b92b--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Abhishek Kumar Srivastava",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:53"
+    ],
+    "source": "ai-infra,Model Quantization"
+  },
+  {
+    "title": "DAY 4- FineTuning (Model Quantization\nComplete Guide)",
+    "url": "https://medium.com/@ayushigupta9723?source=topic_portal---recommended_stories---model_quantization---5-84--------------------1346700b_2681_4961_bba3_ac375a12b92b--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Ayushi Gupta",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:53"
+    ],
+    "source": "ai-infra,Model Quantization"
+  },
+  {
+    "title": "What’s MXFP4? The 4-Bit Secret Powering OpenAI’s GPT‑OSS Models on Modest Hardware",
+    "url": "https://medium.com/@rakshitaralimatti2001?source=topic_portal---recommended_stories---model_quantization---6-85--------------------1346700b_2681_4961_bba3_ac375a12b92b--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Rakshit",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:53"
+    ],
+    "source": "ai-infra,Model Quantization"
+  },
+  {
+    "title": "Compression Is Easy. Preserving Meaning Is Not | Compressed Language Models | Beginner 101",
+    "url": "https://medium.com/@nisarg.nargund?source=topic_portal---recommended_stories---model_quantization---7-84--------------------1346700b_2681_4961_bba3_ac375a12b92b--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "NSAI",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:03:53"
+    ],
+    "source": "ai-infra,Model Quantization"
+  },
+  {
+    "title": "The Logistics of Large-Scale Training: DP, TP, PP, and the Role of Communication",
+    "url": "https://medium.com/@praneetamv?source=topic_portal---recommended_stories---distributed_training---0-107--------------------1ad19418_2ee6_4dff_a0bf_e369c12b0a22--------------",
+    "author": "Praneeta Mallela",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:21"
+    ],
+    "source": "ai-infra,Distributed Training"
+  },
+  {
+    "title": "How Distributed Training Makes Large Models Possible: DDP vs FSDP",
+    "url": "https://medium.com/@hussenmi?source=topic_portal---recommended_stories---distributed_training---1-84--------------------1ad19418_2ee6_4dff_a0bf_e369c12b0a22--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Hussen Mohammed Ibrahim",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:21"
+    ],
+    "source": "ai-infra,Distributed Training"
+  },
+  {
+    "title": "DeepSpeed: Training Foundation Models Beyond a Single GPU",
+    "url": "https://medium.com/@justinduy?source=topic_portal---recommended_stories---distributed_training---2-85--------------------1ad19418_2ee6_4dff_a0bf_e369c12b0a22--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Duy Nguyen",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:21"
+    ],
+    "source": "ai-infra,Distributed Training"
+  },
+  {
+    "title": "The Invisible Backbone of 3D Parallelism: Building a Device Mesh from Scratch",
+    "url": "https://medium.com/@shuklashashankshekhar863?source=topic_portal---recommended_stories---distributed_training---3-84--------------------1ad19418_2ee6_4dff_a0bf_e369c12b0a22--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Shuklashashankshekhar",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:21"
+    ],
+    "source": "ai-infra,Distributed Training"
+  },
+  {
+    "title": "Probabilistic Forecasting with Dask-LightGBM",
+    "url": "https://medium.com/@imscientist?source=topic_portal---recommended_stories---distributed_training---4-85--------------------1ad19418_2ee6_4dff_a0bf_e369c12b0a22--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Anton Ivanov",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:21"
+    ],
+    "source": "ai-infra,Distributed Training"
+  },
+  {
+    "title": "The “Hidden” Bottleneck: Why Your GPU is Waiting (and How to Measure It)",
+    "url": "https://medium.com/@anuj1232611?source=topic_portal---recommended_stories---distributed_training---5-84--------------------1ad19418_2ee6_4dff_a0bf_e369c12b0a22--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "skywxlker-ops",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:21"
+    ],
+    "source": "ai-infra,Distributed Training"
+  },
+  {
+    "title": "How GPUs Talk: A Practical Guide to Multi-GPU Training and Communication",
+    "url": "https://medium.com/@samarth.colleges?source=topic_portal---recommended_stories---distributed_training---6-85--------------------1ad19418_2ee6_4dff_a0bf_e369c12b0a22--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Samarth Narang",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:21"
+    ],
+    "source": "ai-infra,Distributed Training"
+  },
+  {
+    "title": "Ghost GPU Usage: When nvidia-smi Says 100% But Nothing's Actually Running",
+    "url": "https://medium.com/@runaker?source=topic_portal---recommended_stories---distributed_training---7-84--------------------1ad19418_2ee6_4dff_a0bf_e369c12b0a22--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Björn Runåker",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:21"
+    ],
+    "source": "ai-infra,Distributed Training"
+  },
+  {
+    "title": "How Distributed Training Makes Large Models Possible: DDP vs FSDP",
+    "url": "https://medium.com/@hussenmi?source=topic_portal---latest_stories---distributed_training---0-----------------------------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Hussen Mohammed Ibrahim",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:21"
+    ],
+    "source": "ai-infra,Distributed Training"
+  },
+  {
+    "title": "The Invisible Backbone of 3D Parallelism: Building a Device Mesh from Scratch",
+    "url": "https://medium.com/@shuklashashankshekhar863?source=topic_portal---latest_stories---distributed_training---1-----------------------------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Shuklashashankshekhar",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:21"
+    ],
+    "source": "ai-infra,Distributed Training"
+  },
+  {
+    "title": "AI-Native Infrastructure: The New Digital Imperative",
+    "url": "https://medium.com/@vpodk?source=topic_portal---recommended_stories---gpu_optimization---0-84--------------------9f2124ba_6d9b_42fb_b17d_6e96fb7d9026--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Valentin Podkamennyi",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:56"
+    ],
+    "source": "ai-infra,GPU Optimization"
+  },
+  {
+    "title": "Beyond Utilization: Measuring True GPU Efficiency in the GenAI Era",
+    "url": "https://medium.com/@brentsegner?source=topic_portal---recommended_stories---gpu_optimization---1-85--------------------9f2124ba_6d9b_42fb_b17d_6e96fb7d9026--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Brent Segner",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:56"
+    ],
+    "source": "ai-infra,GPU Optimization"
+  },
+  {
+    "title": "【From Zero】Chapter 5 — Advanced Performance Optimization for Real-World RAG Systems",
+    "url": "https://medium.com/@yzh0623?source=topic_portal---recommended_stories---gpu_optimization---2-84--------------------9f2124ba_6d9b_42fb_b17d_6e96fb7d9026--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Zhenhui Yuan",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:56"
+    ],
+    "source": "ai-infra,GPU Optimization"
+  },
+  {
+    "title": "7 PyTorch Mixed-Precision Rules That Avoid NaNs",
+    "url": "https://medium.com/@Modexa?source=topic_portal---recommended_stories---gpu_optimization---3-85--------------------9f2124ba_6d9b_42fb_b17d_6e96fb7d9026--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Modexa",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:56"
+    ],
+    "source": "ai-infra,GPU Optimization"
+  },
+  {
+    "title": "8 TorchAudio Pipelines That Keep GPUs Fed",
+    "url": "https://medium.com/@Nexumo_?source=topic_portal---recommended_stories---gpu_optimization---4-84--------------------9f2124ba_6d9b_42fb_b17d_6e96fb7d9026--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Nexumo",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:56"
+    ],
+    "source": "ai-infra,GPU Optimization"
+  },
+  {
+    "title": "Optimizing GPU Usage on Low‑VRAM Machines — 6 Practical Steps to Dodge OOM Errors",
+    "url": "https://medium.com/@jaswanthchos?source=topic_portal---recommended_stories---gpu_optimization---5-85--------------------9f2124ba_6d9b_42fb_b17d_6e96fb7d9026--------------",
+    "author": "Jaswanth Sabbineni",
+    "organization": "Medium",
+    "excerpt": "In",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:56"
+    ],
+    "source": "ai-infra,GPU Optimization"
+  },
+  {
+    "title": "10 vLLM Deploy Patterns That Cut GPU Cost/Token",
+    "url": "https://medium.com/@kaushalsinh73?source=topic_portal---recommended_stories---gpu_optimization---6-84--------------------9f2124ba_6d9b_42fb_b17d_6e96fb7d9026--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Neurobyte",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:56"
+    ],
+    "source": "ai-infra,GPU Optimization"
+  },
+  {
+    "title": "How 120B+ Parameter Models Run on One GPU: The Architecture Deep-Dive",
+    "url": "https://medium.com/@LLMImplementation?source=topic_portal---recommended_stories---gpu_optimization---7-85--------------------9f2124ba_6d9b_42fb_b17d_6e96fb7d9026--------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "LLM Implementation",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:56"
+    ],
+    "source": "ai-infra,GPU Optimization"
+  },
+  {
+    "title": "Beyond Utilization: Measuring True GPU Efficiency in the GenAI Era",
+    "url": "https://medium.com/@brentsegner?source=topic_portal---latest_stories---gpu_optimization---0-----------------------------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Brent Segner",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:56"
+    ],
+    "source": "ai-infra,GPU Optimization"
+  },
+  {
+    "title": "𝐊𝐕 𝐂𝐚𝐜𝐡𝐞 𝐈𝐬 𝐍𝐨𝐭 𝐚𝐧 𝐎𝐩𝐭𝐢𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧; 𝐈𝐭’𝐬 𝐚 𝐅𝐢𝐫𝐬𝐭-𝐂𝐥𝐚𝐬𝐬…",
+    "url": "https://medium.com/@mansuri4638?source=topic_portal---latest_stories---gpu_optimization---1-----------------------------------",
+    "author": "Medium Author",
+    "organization": "Medium",
+    "excerpt": "Irfan Mansuri",
+    "published_date": "2026-01-29",
+    "tags": [
+      "2026-01-29 06:04:56"
+    ],
+    "source": "ai-infra,GPU Optimization"
+  }
+]

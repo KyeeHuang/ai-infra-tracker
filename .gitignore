@@ -38,3 +38,4 @@ data/*.db
 !data/repos.json
 !data/papers.json
 !data/blogs.json
+!data/medium.json
