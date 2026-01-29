@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import fs from 'fs';
+import path from 'path';
 
 const styles = {
   container: { maxWidth: '1200px', margin: '0 auto', padding: '20px', fontFamily: '-apple-system, sans-serif', background: '#f8f9fa', minHeight: '100vh' },
@@ -34,18 +36,6 @@ const styles = {
   cacheInfo: { fontSize: '11px', color: '#aaa', marginLeft: '8px' },
 };
 
-// 精选博客数据
-const qualityBlogs = [
-  { title: '深入理解 vLLM: 高性能 LLM 推理框架', author: 'vLLM Team', organization: 'vLLM', url: 'https://vllm.ai/', published_date: '2025-12-15', excerpt: 'vLLM 通过 PagedAttention 技术实现高效的内存管理，显著提升 LLM 推理吞吐量。', tags: ['vLLM', '推理优化'], source: '官方博客' },
-  { title: 'FlashAttention-3: 更快、更省内存的注意力计算', author: 'Tri Dao', organization: 'Stanford', url: 'https://github.com/flash-attention/flash-attention', published_date: '2025-11-20', excerpt: 'FlashAttention 的最新版本，利用 GPU 硬件特性进一步优化注意力计算。', tags: ['FlashAttention', 'GPU'], source: 'GitHub' },
-  { title: 'DeepSeek-V3 技术报告解读', author: 'DeepSeek AI', organization: 'DeepSeek', url: 'https://github.com/deepseek-ai/DeepSeek-V3', published_date: '2025-12-26', excerpt: 'DeepSeek-V3 采用混合专家(MoE)架构，在保持高性能的同时大幅降低推理成本。', tags: ['DeepSeek', 'MoE'], source: '技术报告' },
-  { title: 'TensorRT-LLM 入门指南', author: 'NVIDIA', organization: 'NVIDIA', url: 'https://github.com/NVIDIA/TensorRT-LLM', published_date: '2025-10-15', excerpt: 'TensorRT-LLM 提供了开箱即用的 LLM 优化方案，支持多种主流模型。', tags: ['TensorRT', 'NVIDIA'], source: '官方文档' },
-  { title: 'Continuous Batching 详解', author: 'PyTorch', organization: 'Meta', url: 'https://pytorch.org/', published_date: '2025-09-20', excerpt: 'Continuous Batching 相比静态批处理可以显著提高 GPU 利用率和推理速度。', tags: ['Batching', 'GPU'], source: '技术博客' },
-  { title: '模型量化技术综述', author: 'MIT', organization: 'MIT', url: 'https://arxiv.org', published_date: '2025-08-10', excerpt: '从 INT8 到 4-bit，模型量化技术让大模型在消费级 GPU 上也能高效运行。', tags: ['量化', '模型压缩'], source: 'arXiv' },
-  { title: '分布式训练最佳实践', author: 'HPC-AI', organization: 'HPC-AI', url: 'https://github.com/hpcaitech/ColossalAI', published_date: '2025-07-25', excerpt: 'ColossalAI 提供了完整的分布式训练解决方案，支持多种并行策略。', tags: ['分布式训练', '并行'], source: '技术博客' },
-  { title: 'DeepSpeed ZeRO 优化器详解', author: 'Microsoft', organization: 'Microsoft', url: 'https://github.com/microsoft/DeepSpeed', published_date: '2025-06-18', excerpt: 'ZeRO 通过分阶段优化器和梯度分片技术，大幅降低大模型训练的显存占用。', tags: ['DeepSpeed', 'ZeRO'], source: '官方博客' },
-];
-
 const TARGET_REPOS = [
   'vllm-project/vllm', 'sgl-project/sglang', 'NVIDIA/TensorRT-LLM',
   'deepseek-ai/DeepSeek-V3', 'hpcaitech/ColossalAI', 'microsoft/DeepSpeed',
@@ -73,7 +63,7 @@ function setCachedData(key, data) {
   } catch (e) {}
 }
 
-export default function Home({ repos, papers }) {
+export default function Home({ repos, papers, blogs }) {
   const [activeTab, setActiveTab] = useState('repos');
   const [searchTerm, setSearchTerm] = useState('');
   const [clientRepos, setClientRepos] = useState([]);
@@ -189,7 +179,7 @@ export default function Home({ repos, papers }) {
     paper.authors?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const filteredBlogs = qualityBlogs.filter(blog =>
+  const filteredBlogs = (blogs || []).filter(blog =>
     blog.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
     blog.tags?.some(t => t.toLowerCase().includes(searchTerm.toLowerCase()))
   );
@@ -215,7 +205,7 @@ export default function Home({ repos, papers }) {
             {fromCache.papers && <span style={styles.cacheInfo}>(缓存)</span>}
           </button>
           <button style={activeTab === 'blogs' ? styles.navButtonActive : styles.navButton} onClick={() => setActiveTab('blogs')}>
-            📰 博客 ({qualityBlogs.length})
+            📰 博客 ({(blogs || []).length})
           </button>
         </nav>
       </header>
@@ -389,8 +379,19 @@ export async function getStaticProps() {
   repos.sort((a, b) => b.stars - a.stars);
   papers = papers.slice(0, 50);
 
+  // 加载博客数据
+  let blogs = [];
+  try {
+    const blogsPath = path.join(process.cwd(), 'data/blogs.json');
+    if (fs.existsSync(blogsPath)) {
+      blogs = JSON.parse(fs.readFileSync(blogsPath, 'utf8'));
+    }
+  } catch (e) {
+    console.error('Error loading blogs:', e);
+  }
+
   return {
-    props: { repos, papers },
+    props: { repos, papers, blogs },
     revalidate: 172800,
   };
 }
