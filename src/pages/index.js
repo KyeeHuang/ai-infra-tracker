@@ -303,6 +303,7 @@ export default function Home({ repos, papers, blogs }) {
                   <p style={styles.blogExcerpt}>{blog.excerpt}</p>
                   <div style={styles.repoStats}>
                     {blog.tags.map(tag => <span key={tag} style={styles.tag}>{tag}</span>)}
+                    <span style={styles.repoStat}>👍 {blog.votes?.toLocaleString() || 0}</span>
                     <span style={styles.repoStat}>📰 {blog.source}</span>
                   </div>
                 </div>
