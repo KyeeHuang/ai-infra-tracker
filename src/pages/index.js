@@ -335,6 +335,6 @@ export async function getStaticProps() {
 
   return {
     props: { repos, papers },
-    revalidate: 3600,
+    revalidate: 172800, // 每2天重新验证
   };
 }
