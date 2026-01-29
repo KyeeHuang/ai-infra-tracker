@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
 const styles = {
   container: { maxWidth: '1200px', margin: '0 auto', padding: '20px', fontFamily: '-apple-system, sans-serif', background: '#f8f9fa', minHeight: '100vh' },
@@ -32,6 +31,7 @@ const styles = {
   footer: { textAlign: 'center', padding: '40px 20px', color: '#888', marginTop: '40px' },
   section: { marginBottom: '30px' },
   sectionTitle: { fontSize: '24px', marginBottom: '20px', paddingBottom: '10px', borderBottom: '2px solid #e0e0e0' },
+  cacheInfo: { fontSize: '11px', color: '#aaa', marginLeft: '8px' },
 };
 
 // 精选博客数据
@@ -52,16 +52,60 @@ const TARGET_REPOS = [
   'meta-llama/llama', 'QwenLM/Qwen', 'THUDM/ChatGLM3'
 ];
 
+const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24小时缓存
+
+function getCachedData(key) {
+  try {
+    const cached = localStorage.getItem(key);
+    if (cached) {
+      const { data, timestamp } = JSON.parse(cached);
+      if (Date.now() - timestamp < CACHE_DURATION) {
+        return data;
+      }
+    }
+  } catch (e) {}
+  return null;
+}
+
+function setCachedData(key, data) {
+  try {
+    localStorage.setItem(key, JSON.stringify({ data, timestamp: Date.now() }));
+  } catch (e) {}
+}
+
 export default function Home({ repos, papers }) {
   const [activeTab, setActiveTab] = useState('repos');
   const [searchTerm, setSearchTerm] = useState('');
   const [clientRepos, setClientRepos] = useState([]);
   const [clientPapers, setClientPapers] = useState([]);
   const [loading, setLoading] = useState({ repos: false, papers: false });
+  const [fromCache, setFromCache] = useState({ repos: false, papers: false });
 
-  // 实时加载 GitHub 数据
+  // 初始化时检查缓存
+  useEffect(() => {
+    const cachedRepos = getCachedData('ai-infra-repos');
+    const cachedPapers = getCachedData('ai-infra-papers');
+    
+    if (cachedRepos) {
+      setClientRepos(cachedRepos);
+      setFromCache(prev => ({ ...prev, repos: true }));
+    } else {
+      setClientRepos(repos);
+    }
+    
+    if (cachedPapers) {
+      setClientPapers(cachedPapers);
+      setFromCache(prev => ({ ...prev, papers: true }));
+    } else {
+      setClientPapers(papers);
+    }
+  }, [repos, papers]);
+
+  // 加载 GitHub 数据（带缓存）
   const loadGitHubData = async () => {
-    if (clientRepos.length > 0) return;
+    const cached = getCachedData('ai-infra-repos');
+    if (cached && clientRepos.length > 0) return;
+    
     setLoading(prev => ({ ...prev, repos: true }));
     try {
       const newRepos = [];
@@ -86,15 +130,19 @@ export default function Home({ repos, papers }) {
         await new Promise(r => setTimeout(r, 500));
       }
       setClientRepos(newRepos);
+      setCachedData('ai-infra-repos', newRepos);
+      setFromCache(prev => ({ ...prev, repos: false }));
     } catch (e) {
       console.error('Error loading repos:', e);
     }
     setLoading(prev => ({ ...prev, repos: false }));
   };
 
-  // 实时加载 arXiv 数据
+  // 加载 arXiv 数据（带缓存）
   const loadArxivData = async () => {
-    if (clientPapers.length > 0) return;
+    const cached = getCachedData('ai-infra-papers');
+    if (cached && clientPapers.length > 0) return;
+    
     setLoading(prev => ({ ...prev, papers: true }));
     try {
       const categories = ['cs.AI', 'cs.LG', 'cs.DC'];
@@ -120,23 +168,23 @@ export default function Home({ repos, papers }) {
           }
         }
       }
-      setClientPapers(allPapers.slice(0, 50));
+      const slicedPapers = allPapers.slice(0, 50);
+      setClientPapers(slicedPapers);
+      setCachedData('ai-infra-papers', slicedPapers);
+      setFromCache(prev => ({ ...prev, papers: false }));
     } catch (e) {
       console.error('Error loading papers:', e);
     }
     setLoading(prev => ({ ...prev, papers: false }));
   };
 
-  const displayRepos = clientRepos.length > 0 ? clientRepos : repos;
-  const displayPapers = clientPapers.length > 0 ? clientPapers : papers;
-
-  const filteredRepos = displayRepos.filter(repo => 
+  const filteredRepos = clientRepos.filter(repo => 
     repo.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
     repo.full_name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
     repo.description?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const filteredPapers = displayPapers.filter(paper => 
+  const filteredPapers = clientPapers.filter(paper => 
     paper.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
     paper.authors?.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -159,10 +207,12 @@ export default function Home({ repos, papers }) {
 
         <nav style={styles.nav}>
           <button style={activeTab === 'repos' ? styles.navButtonActive : styles.navButton} onClick={() => { setActiveTab('repos'); loadGitHubData(); }}>
-            📦 仓库 {loading.repos ? '(加载中...)' : `(${displayRepos.length})`}
+            📦 仓库 {loading.repos ? '(加载中...)' : `(${clientRepos.length})`}
+            {fromCache.repos && <span style={styles.cacheInfo}>(缓存)</span>}
           </button>
           <button style={activeTab === 'papers' ? styles.navButtonActive : styles.navButton} onClick={() => { setActiveTab('papers'); loadArxivData(); }}>
-            📄 论文 {loading.papers ? '(加载中...)' : `(${displayPapers.length})`}
+            📄 论文 {loading.papers ? '(加载中...)' : `(${clientPapers.length})`}
+            {fromCache.papers && <span style={styles.cacheInfo}>(缓存)</span>}
           </button>
           <button style={activeTab === 'blogs' ? styles.navButtonActive : styles.navButton} onClick={() => setActiveTab('blogs')}>
             📰 博客 ({qualityBlogs.length})
@@ -183,7 +233,10 @@ export default function Home({ repos, papers }) {
       {activeTab === 'repos' && (
         <main>
           <section style={styles.section}>
-            <h2 style={styles.sectionTitle}>📦 GitHub 高星项目 {clientRepos.length > 0 ? '(实时)' : '(预加载)'}</h2>
+            <h2 style={styles.sectionTitle}>
+              📦 GitHub 高星项目 
+              {fromCache.repos && clientRepos.length > 0 && <span style={styles.cacheInfo}>(24h缓存)</span>}
+            </h2>
             {loading.repos ? (
               <div style={styles.loading}>🔄 正在从 GitHub 获取数据...</div>
             ) : filteredRepos.length === 0 ? (
@@ -214,7 +267,10 @@ export default function Home({ repos, papers }) {
       {activeTab === 'papers' && (
         <main>
           <section style={styles.section}>
-            <h2 style={styles.sectionTitle}>📄 最新 arXiv 论文 {clientPapers.length > 0 ? '(实时)' : '(预加载)'}</h2>
+            <h2 style={styles.sectionTitle}>
+              📄 最新 arXiv 论文
+              {fromCache.papers && clientPapers.length > 0 && <span style={styles.cacheInfo}>(24h缓存)</span>}
+            </h2>
             {loading.papers ? (
               <div style={styles.loading}>🔄 正在从 arXiv 获取数据...</div>
             ) : filteredPapers.length === 0 ? (
@@ -335,6 +391,6 @@ export async function getStaticProps() {
 
   return {
     props: { repos, papers },
-    revalidate: 172800, // 每2天重新验证
+    revalidate: 172800,
   };
 }
