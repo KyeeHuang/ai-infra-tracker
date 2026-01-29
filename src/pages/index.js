@@ -76,25 +76,34 @@ export default function Home({ repos, papers, blogs }) {
     const cachedRepos = getCachedData('ai-infra-repos');
     const cachedPapers = getCachedData('ai-infra-papers');
     
-    if (cachedRepos) {
+    // 优先使用缓存
+    if (cachedRepos && cachedRepos.length > 0) {
       setClientRepos(cachedRepos);
       setFromCache(prev => ({ ...prev, repos: true }));
     } else {
-      setClientRepos(repos);
+      // 没有缓存才用静态数据
+      setClientRepos(repos || []);
     }
     
-    if (cachedPapers) {
+    if (cachedPapers && cachedPapers.length > 0) {
       setClientPapers(cachedPapers);
       setFromCache(prev => ({ ...prev, papers: true }));
     } else {
-      setClientPapers(papers);
+      setClientPapers(papers || []);
     }
   }, [repos, papers]);
 
-  // 加载 GitHub 数据（带缓存）
+  // 加载 GitHub 数据（带缓存）- 只在需要时加载一次
   const loadGitHubData = async () => {
+    // 如果已经有数据（包括缓存），不再请求
+    if (clientRepos.length > 0) return;
+    
     const cached = getCachedData('ai-infra-repos');
-    if (cached && clientRepos.length > 0) return;
+    if (cached && cached.length > 0) {
+      setClientRepos(cached);
+      setFromCache(prev => ({ ...prev, repos: true }));
+      return;
+    }
     
     setLoading(prev => ({ ...prev, repos: true }));
     try {
@@ -128,10 +137,17 @@ export default function Home({ repos, papers, blogs }) {
     setLoading(prev => ({ ...prev, repos: false }));
   };
 
-  // 加载 arXiv 数据（带缓存）
+  // 加载 arXiv 数据（带缓存）- 只在需要时加载一次
   const loadArxivData = async () => {
+    // 如果已经有数据（包括缓存），不再请求
+    if (clientPapers.length > 0) return;
+    
     const cached = getCachedData('ai-infra-papers');
-    if (cached && clientPapers.length > 0) return;
+    if (cached && cached.length > 0) {
+      setClientPapers(cached);
+      setFromCache(prev => ({ ...prev, papers: true }));
+      return;
+    }
     
     setLoading(prev => ({ ...prev, papers: true }));
     try {
@@ -390,6 +406,22 @@ export async function getStaticProps() {
   } catch (e) {
     console.error('Error loading blogs:', e);
   }
+
+  // 加载 Medium 数据
+  let mediumBlogs = [];
+  try {
+    const mediumPath = path.join(process.cwd(), 'data/medium.json');
+    if (fs.existsSync(mediumPath)) {
+      mediumBlogs = JSON.parse(fs.readFileSync(mediumPath, 'utf8'));
+      // 添加来源标记
+      mediumBlogs = mediumBlogs.map(b => ({ ...b, source: 'Medium' }));
+    }
+  } catch (e) {
+    console.error('Error loading medium:', e);
+  }
+
+  // 合并博客数据
+  blogs = [...blogs, ...mediumBlogs];
 
   return {
     props: { repos, papers, blogs },
