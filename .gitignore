@@ -34,5 +34,7 @@ yarn-error.log*
 next-env.d.ts
 
 # Database
-data/
-*.db
+data/*.db
+!data/repos.json
+!data/papers.json
+!data/blogs.json
