@@ -11,7 +11,7 @@
     "votes": 3200
   },
   {
-    "title": "FlashAttention原理详解：如何让Transformer更快",
+    "title": "FlashAttention算法原理详解",
     "author": "清华大学交叉信息院",
     "organization": "清华大学",
     "url": "https://www.zhihu.com/question/501583073",
@@ -22,7 +22,7 @@
     "votes": 2800
   },
   {
-    "title": "DeepSeek-V3技术报告解读",
+    "title": "DeepSeek-V3技术报告完整解读",
     "author": "幻方量化",
     "organization": "DeepSeek",
     "url": "https://www.zhihu.com/question/623308672",
@@ -33,7 +33,7 @@
     "votes": 2500
   },
   {
-    "title": "TensorRT-LLM入门指南",
+    "title": "TensorRT-LLM完全指南",
     "author": "NVIDIA中国",
     "organization": "NVIDIA",
     "url": "https://www.zhihu.com/question/518987654",
@@ -44,7 +44,7 @@
     "votes": 2200
   },
   {
-    "title": "大模型推理优化技术总结",
+    "title": "大模型推理优化技术全景总结",
     "author": "阿里云开发者社区",
     "organization": "阿里云",
     "url": "https://www.zhihu.com/question/623308673",
@@ -55,7 +55,7 @@
     "votes": 2100
   },
   {
-    "title": "Continuous Batching详解",
+    "title": "Continuous Batching原理与实现",
     "author": "Meta AI",
     "organization": "Meta",
     "url": "https://www.zhihu.com/question/623308674",
@@ -66,7 +66,7 @@
     "votes": 1800
   },
   {
-    "title": "DeepSpeed ZeRO优化器详解",
+    "title": "DeepSpeed ZeRO优化器深入解析",
     "author": "微软深度学习组",
     "organization": "Microsoft",
     "url": "https://www.zhihu.com/question/623308675",
@@ -77,7 +77,7 @@
     "votes": 1700
   },
   {
-    "title": "ColossalAI分布式训练指南",
+    "title": "ColossalAI分布式训练完全指南",
     "author": "HPC-AI",
     "organization": "HPC-AI",
     "url": "https://www.zhihu.com/question/623308676",
@@ -88,7 +88,7 @@
     "votes": 1600
   },
   {
-    "title": "模型量化技术入门",
+    "title": "模型量化技术入门到精通",
     "author": "Intel中国",
     "organization": "Intel",
     "url": "https://www.zhihu.com/question/623308677",
@@ -99,7 +99,7 @@
     "votes": 1500
   },
   {
-    "title": "CUDA编程优化技巧",
+    "title": "CUDA编程优化技巧总结",
     "author": "NVIDIA开发者",
     "organization": "NVIDIA",
     "url": "https://www.zhihu.com/question/623308678",
@@ -110,7 +110,7 @@
     "votes": 1400
   },
   {
-    "title": "LLM推理服务化部署实践",
+    "title": "LLM推理服务化部署完整方案",
     "author": "腾讯云开发者",
     "organization": "腾讯云",
     "url": "https://www.zhihu.com/question/623308679",
@@ -121,7 +121,7 @@
     "votes": 1300
   },
   {
-    "title": "Transformer推理优化总结",
+    "title": "Transformer推理优化技术总结",
     "author": "字节跳动AI Lab",
     "organization": "字节跳动",
     "url": "https://www.zhihu.com/question/623308680",
@@ -143,7 +143,7 @@
     "votes": 1100
   },
   {
-    "title": "GPU显存优化技术",
+    "title": "GPU显存优化技术大全",
     "author": "百度飞桨",
     "organization": "百度",
     "url": "https://www.zhihu.com/question/623308682",
@@ -154,7 +154,7 @@
     "votes": 1000
   },
   {
-    "title": "分布式训练通信优化",
+    "title": "分布式训练通信优化实战",
     "author": "美团技术团队",
     "organization": "美团",
     "url": "https://www.zhihu.com/question/623308683",
