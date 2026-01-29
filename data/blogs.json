@@ -1,6 +1,3 @@
-// data/blogs.json - 知乎AI Infra高赞文章（真实链接）
-// 数据来源：通过Chrome手动验证的真实知乎文章
-
 [
   {
     "title": "万字长文解析vLLM原理与PagedAttention",
