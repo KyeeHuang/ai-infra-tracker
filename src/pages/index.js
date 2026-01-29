@@ -42,13 +42,13 @@ export default function Home({ posts, projects }) {
   return (
     <div style={styles.container}>
       <Head>
-        <title>AI Infra Tracker Blog - AI 基础设施技术博客</title>
-        <meta name="description" content="个人技术博客，分享AI、编程、项目经验" />
+        <title>AI Infra Tracker - AI 基础设施资源追踪</title>
+        <meta name="description" content="追踪 AI 基础设施领域的最新资源：GitHub 仓库、arXiv 论文、技术文章" />
       </Head>
 
       <header style={styles.header}>
-        <h1 style={styles.title}>🚀 AI Infra Tracker Blog</h1>
-        <p style={styles.subtitle}>技术笔记 | 项目分享 | 学习记录</p>
+        <h1 style={styles.title}>🚀 AI Infra Tracker</h1>
+        <p style={styles.subtitle}>GitHub 高星项目 | arXiv 论文 | 技术文章</p>
         
         <nav style={styles.nav}>
           <button style={activeTab === 'blog' ? styles.navButtonActive : styles.navButton} onClick={() => setActiveTab('blog')}>
@@ -154,7 +154,7 @@ export default function Home({ posts, projects }) {
 
       <footer style={styles.footer}>
         <p>🤖 Built with Next.js + Vercel</p>
-        <p style={{ marginTop: '10px', fontSize: '13px' }}>© 2026 AI Infra Tracker Blog. All rights reserved.</p>
+        <p style={{ marginTop: '10px', fontSize: '13px' }}>© 2026 AI Infra Tracker. All rights reserved.</p>
       </footer>
     </div>
   );
