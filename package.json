@@ -1,19 +1,28 @@
 {
-  "name": "ai-infra-tracker-blog",
+  "name": "ai-infra-tracker",
   "version": "1.0.0",
+  "description": "AI Infrastructure resources tracker - 追踪AI基础设施领域的最新资源",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "scrape:github": "node scripts/scrape-github.js",
+    "scrape:arxiv": "node scripts/scrape-arxiv.js",
+    "scrape:zhihu": "node scripts/scrape-zhihu-automated.js",
+    "scrape:all": "node scripts/scrape-all.js",
+    "db:init": "node scripts/init-db.js",
+    "db:push": "node scripts/push-data.js",
+    "db:pull": "node scripts/pull-data.js"
   },
   "dependencies": {
     "next": "14.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "gray-matter": "^4.0.3",
-    "date-fns": "^3.3.1"
+    "sql.js": "^1.9.0",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^24.36.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.18",
